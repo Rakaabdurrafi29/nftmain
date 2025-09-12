@@ -1,5 +1,8 @@
 {
-  "build": {
-    "outputDirectory": "public/build"
-  }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/public/index.php"
+    }
+  ]
 }
