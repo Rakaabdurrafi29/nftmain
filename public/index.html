@@ -1,12 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NFT Lottery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MIMI BABY CAT - Meme Token for Tourism, Charity, NFT & Web3 Community" />
+  <title>MIMI BABY CAT | Meme Token for Tourism & Charity</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <style>
+    @font-face {
+      font-family: "FlashBang";
+      src: url("./js/assets/fonts/KingthingsFlashbang-3Z9G.ttf");
+    }
+    @font-face {
+      font-family: "DigitalItalic";
+      src: url("./js/assets/fonts/Digital7Monoitalic-8MDLJ.ttf");
+    }
+    @font-face {
+      font-family: "Digital";
+      src: url("./js/assets/fonts/Digital7Mono-Yz9J4.ttf");
+    }
+    .font-FlashBang { font-family: "FlashBang", sans-serif; }
+    .font-Digital { font-family: "Digital", monospace; }
+    .font-DigitalItalic { font-family: "DigitalItalic", monospace; }
+
+    .text-gradient {
+      background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
+              #fae3ad 0.89%, #f7d073 17.23%, #f2b92f 42.04%,
+              #f68f60 55.12%, #e76c35 71.54%, #df5a1e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bg-blue-gradient {
+      background: linear-gradient(157.81deg,
+              #def9fa -43.27%, #bef3f5 -21.24%, #9dedf0 12.19%,
+              #7de7eb 29.82%, #5ce1e6 51.94%, #33bbcf 90.29%);
+    }
+    .bg-black-gradient {
+      background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+    }
+
+    .animate-slide-top {
+      -webkit-animation: slide-top 0.5s cubic-bezier(0.25,0.46,0.45,0.94) both;
+      animation: slide-top 0.5s cubic-bezier(0.25,0.46,0.45,0.94) both;
+    }
+    @keyframes slide-top {
+      0% { transform: translateY(100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
 </head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+<body class="bg-[#0a0a0f] text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 flex items-center justify-between px-6 md:px-16 py-4 bg-black/80 backdrop-blur-md z-50">
+    <div class="flex items-center gap-3">
+      <img src="assets/mimibabycat logo.png" alt="MIMI BABY CAT Logo" class="h-12" />
+      <span class="font-bold text-gradient text-xl">MIMI BABY CAT</span>
+    </div>
+    <ul class="hidden md:flex gap-6 font-medium">
+      <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+      <li><a href="#tokenomics" class="hover:text-yellow-400">Tokenomics</a></li>
+      <li><a href="#roadmap" class="hover:text-yellow-400">Roadmap</a></li>
+      <li><a href="#team" class="hover:text-yellow-400">Team</a></li>
+      <li><a href="#faq" class="hover:text-yellow-400">FAQ</a></li>
+      <li><a href="#whitepaper" class="hover:text-yellow-400">Whitepaper</a></li>
+      <li><a href="#community" class="hover:text-yellow-400">Community</a></li>
+      <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+    </ul>
+    <!-- Hamburger -->
+    <div id="hamburger" class="md:hidden flex flex-col gap-1 cursor-pointer">
+      <div class="w-6 h-0.5 bg-white"></div>
+      <div class="w-6 h-0.5 bg-white"></div>
+      <div class="w-6 h-0.5 bg-white"></div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero flex flex-col md:flex-row items-center justify-between mt-32 px-6 md:px-16">
+    <!-- Teks -->
+    <div class="hero-text flex-1 animate-slide-top">
+      <h3 class="text-xl md:text-2xl font-Digital text-gray-300">
+        Greetings to MIMI BABY CAT
+      </h3>
+      <h1 class="text-gradient text-3xl md:text-6xl font-FlashBang leading-tight my-4">
+        Beloved Cat of President of Indonesia
+      </h1>
+      <h3 class="text-lg md:text-2xl font-DigitalItalic text-gray-400">
+        No random codes. Our contract begins with MIMI
+      </h3>
+      <div class="cta flex gap-4 mt-6 flex-wrap">
+        <a href="#" class="bg-blue-gradient px-6 py-3 rounded-lg font-bold text-white shadow-lg">Buy $MIMI</a>
+        <a href="#" class="bg-black-gradient px-6 py-3 rounded-lg font-bold text-white shadow-lg">Dextools</a>
+      </div>
+    </div>
+
+    <!-- Gambar -->
+    <div class="hero-img flex-1 flex justify-center mt-10 md:mt-0 animate-pulse">
+      <img src="assets/mimibabycat.png" alt="Mimi Baby Cat Mascot" class="max-w-[600px] w-full drop-shadow-2xl" />
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6 md:px-16 text-center">
+    <h2 class="text-3xl font-bold text-yellow-500">About Us</h2>
+    <p class="mt-4 text-gray-300 max-w-3xl mx-auto">
+      Visi kami adalah menjadi pelopor ekosistem Web3 berbasis komunitas yang menghubungkan wisatawan global dengan pelaku wisata Indonesia secara langsung.
+    </p>
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <div class="p-6 rounded-xl bg-black/40 hover:scale-105 transition">
+        <h3 class="font-bold text-xl">Direct Selling</h3>
+        <p class="text-gray-400 mt-2">Transaksi wisata langsung tanpa perantara.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-black/40 hover:scale-105 transition">
+        <h3 class="font-bold text-xl">Blockchain Aggregator</h3>
+        <p class="text-gray-400 mt-2">Inkubasi startup pariwisata berbasis Web3.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-black/40 hover:scale-105 transition">
+        <h3 class="font-bold text-xl">NFT Pariwisata</h3>
+        <p class="text-gray-400 mt-2">Tiket digital, sertifikat, & promosi global.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tokenomics -->
+  <section id="tokenomics" class="py-20 px-6 md:px-16 text-center">
+    <h2 class="text-3xl font-bold text-yellow-500">Tokenomics</h2>
+    <canvas id="tokenChart" class="max-w-md mx-auto mt-10"></canvas>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-20 px-6 md:px-16">
+    <h2 class="text-center text-3xl font-bold text-yellow-500">Roadmap</h2>
+    <div class="grid md:grid-cols-2 gap-6 mt-10">
+      <div class="p-6 rounded-xl bg-black/40">
+        <h3 class="font-bold text-xl">2025</h3>
+        <p class="text-gray-400">Launch Token, Whitepaper, Komunitas</p>
+      </div>
+      <div class="p-6 rounded-xl bg-black/40">
+        <h3 class="font-bold text-xl">2026</h3>
+        <p class="text-gray-400">Direct Selling System, NFT Marketplace</p>
+      </div>
+      <div class="p-6 rounded-xl bg-black/40">
+        <h3 class="font-bold text-xl">2027</h3>
+        <p class="text-gray-400">Blockchain Aggregator, Kemitraan Global</p>
+      </div>
+      <div class="p-6 rounded-xl bg-black/40">
+        <h3 class="font-bold text-xl">2028</h3>
+        <p class="text-gray-400">DAO Governance, Ekspansi Asia Tenggara</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-20 px-6 md:px-16 text-center">
+    <h2 class="text-3xl font-bold text-yellow-500">Team</h2>
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <div class="p-6 rounded-xl bg-black/40">
+        <h3 class="font-bold">Founder</h3>
+        <p class="text-gray-400">MIMI Visionary</p>
+      </div>
+      <div class="p-6 rounded-xl bg-black/40">
+        <h3 class="font-bold">CTO</h3>
+        <p class="text-gray-400">Blockchain Architect</p>
+      </div>
+      <div class="p-6 rounded-xl bg-black/40">
+        <h3 class="font-bold">CMO</h3>
+        <p class="text-gray-400">Community Builder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 px-6 md:px-16">
+    <h2 class="text-center text-3xl font-bold text-yellow-500">FAQ</h2>
+    <div class="max-w-2xl mx-auto mt-10 space-y-4">
+      <details class="bg-black/40 p-4 rounded-lg">
+        <summary class="cursor-pointer font-semibold">Apa itu Mimi Baby Cat?</summary>
+        <p class="mt-2 text-gray-400">Meme token dengan misi nyata untuk mendukung pariwisata Indonesia melalui blockchain.</p>
+      </details>
+      <details class="bg-black/40 p-4 rounded-lg">
+        <summary class="cursor-pointer font-semibold">Bagaimana cara membeli token?</summary>
+        <p class="mt-2 text-gray-400">Bisa melalui DEX favoritmu setelah kontrak resmi dirilis.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Whitepaper -->
+  <section id="whitepaper" class="py-20 px-6 md:px-16 text-center">
+    <h2 class="text-3xl font-bold text-yellow-500">Whitepaper</h2>
+    <div class="mt-6 flex gap-4 justify-center">
+      <a href="#" class="bg-blue-gradient px-6 py-3 rounded-lg font-bold text-white">Download EN</a>
+      <a href="#" class="bg-black-gradient px-6 py-3 rounded-lg font-bold text-white">Download ID</a>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="py-20 px-6 md:px-16 text-center">
+    <h2 class="text-3xl font-bold text-yellow-500">Join Our Community</h2>
+    <p class="mt-4 text-gray-400">Ikuti kami di sosial media:</p>
+    <p class="mt-2">🐦 Twitter | 💬 Telegram | 📸 Instagram | 🎮 Discord</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 md:px-16">
+    <h2 class="text-center text-3xl font-bold text-yellow-500">Contact Us</h2>
+    <form class="max-w-lg mx-auto mt-8 flex flex-col gap-4">
+      <input type="text" placeholder="Nama" required class="p-3 rounded-lg bg-black/40 text-white" />
+      <input type="email" placeholder="Email" required class="p-3 rounded-lg bg-black/40 text-white" />
+      <textarea rows="5" placeholder="Pesan" class="p-3 rounded-lg bg-black/40 text-white"></textarea>
+      <button type="submit" class="bg-blue-gradient px-6 py-3 rounded-lg font-bold text-white">Kirim</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 mt-16 text-gray-400 bg-black/40">
+    © 2025 Mimi Baby Cat • From Indonesia to the World
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Tokenomics Chart
+    const ctx = document.getElementById('tokenChart');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Presale 25%', 'Private Sale 15%', 'Direct Selling Fund 10%', 'Staking 10%', 'Liquidity 15%', 'Airdrop 10%', 'Team 15%'],
+        datasets: [{
+          data: [25,15,10,10,15,10,15],
+          backgroundColor: ['#ff7b00','#ff00c8','#00ffe7','#7b2ff7','#ff4d4d','#ffc107','#00ff7f']
+        }]
+      }
+    });
+
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+      menu.classList.toggle('flex-col');
+      menu.classList.toggle('absolute');
+      menu.classList.toggle('top-16');
+      menu.classList.toggle('right-6');
+      menu.classList.toggle('bg-black/90');
+      menu.classList.toggle('p-6');
+      menu.classList.toggle('rounded-lg');
+    });
+  </script>
 </body>
 </html>
